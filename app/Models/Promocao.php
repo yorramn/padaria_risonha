@@ -15,4 +15,7 @@ class Promocao extends Model
     public function venda(){
         $this->hasMany('App\Models\Venda');
     }
+    public function encomenda(){
+        return $this->hasOne('App\Models\Encomenda');
+    }
 }

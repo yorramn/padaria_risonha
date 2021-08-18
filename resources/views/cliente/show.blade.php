@@ -53,12 +53,16 @@
                         @endif
                     @endforeach
                 </td>
+                @can("update cliente")
                 <td><a href="/cliente/edit/{{$cliente->id}}" class="btn btn-floating waves eaves-effect yellow darken-3"><i class="material-icons">edit</i></a></td>
+                @endcan
+                @can("delete cliente")
                 <form action="/cliente/delete/{{$cliente->id}}" method="post" name="formValidation">
                     @csrf
                     @method('DELETE')
                     <td><button type="submit" class="btn btn-floating waves eaves-effect red darken-2"><i class="material-icons">delete</i></button></td>
                 </form>
+                @endcan
             </tr>
 
             @endforeach

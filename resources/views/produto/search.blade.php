@@ -48,12 +48,16 @@
                         <td>{{$categoria->nome}}</td>
                     @endif
                 @endforeach
+                @can("update produtos")
                 <td><a href="/produto/edit/{{$produto->id}}" class="btn btn-floating waves eaves-effect yellow darken-3"><i class="material-icons">edit</i></a></td>
+                @endcan
+                @can("delete produtos")
                 <form action="/produto/delete/{{$produto->id}}" method="post">
                     @csrf
                     @method('DELETE')
                     <td><button type="submit" class="btn btn-floating waves eaves-effect red darken-2"><i class="material-icons">delete</i></button></td>
                 </form>
+                @endcan
             </tr>
             @endforeach
         </tbody>

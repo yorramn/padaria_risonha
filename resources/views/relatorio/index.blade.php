@@ -9,7 +9,7 @@
                 <div class="col s9">
                     <h5>Produtos</h5>
                 </div>
-                <div class="col s3"> <a href="/relatorio/produtos" class="btn-floating btn-large waves-effect waves-light green lighten-2"><i class="material-icons">print</i></a>
+                <div class="col s3"> <a href="/relatorio/produtos" _blank class="btn-floating btn-large waves-effect waves-light green lighten-2"><i class="material-icons">print</i></a>
                 </div>
             </div>
         </div>
@@ -19,7 +19,7 @@
                 <div class="col s9">
                     <h5>Vendas</h5>
                 </div>
-                <div class="col s3"> <a href="/relatorio/vendas" class="btn-floating btn-large waves-effect waves-light green lighten-2"><i class="material-icons">print</i></a>
+                <div class="col s3"> <a href="/relatorio/vendas" target="_blank" class="btn-floating btn-large waves-effect waves-light green lighten-2"><i class="material-icons">print</i></a>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ class Venda extends Model
         return $this->belongsTo('App\Models\User');
     }
     public function promocao(){
-        return $this->belongsTo('App\Models\Promocao');
+        return $this->hasOne('App\Models\Promocao');
     }
     public function cliente(){
         return $this->belongsTo('App\Models\Cliente');

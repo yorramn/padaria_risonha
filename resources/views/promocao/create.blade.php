@@ -17,8 +17,12 @@
             </div>
             <div class="input-field col s12 m12 l6 xl6">
                 <i class="material-icons prefix">account_circle</i>
-                <input id="onde_aplica" type="text" class="validate" name="onde_aplicar">
-                <label for="onde_aplica">Digite o código do alvo da promoção</label>
+                <select name="onde_aplicar">
+                    <option value="" disabled selected>Escolha uma opção</option>
+                    <option value="cpf">CPF</option>
+                    <option value="todos">Todos</option>
+                </select>
+                <label>Escolha como deverá ser aplicado o desconto</label>
             </div>
             <div class="input-field col s12 m12 l6 xl6">
                 <i class="material-icons prefix">account_circle</i>

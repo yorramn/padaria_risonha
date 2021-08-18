@@ -5,22 +5,24 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cliente extends Model
+class Encomenda extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["id","nome","email","cpf","cep","logradouro","numero","cidade","telefone","user_id"];
+    protected $casts = [
+        'codigos' => 'array',
+        'nomes' => 'array',
+        'precos' => 'array',
+        'quantidade_itens' => 'array'
+    ];
 
     public function user(){
         return $this->belongsTo('App\Models\User');
     }
-    public function venda(){
-        return $this->hasMany('App\Models\Venda');
-    }
-    public function encomenda(){
-        return $this->hasMany('App\Models\Encomenda');
-    }
     public function promocao(){
         return $this->hasOne('App\Models\Promocao');
+    }
+    public function cliente(){
+        return $this->belongsTo('App\Models\Cliente');
     }
 }
